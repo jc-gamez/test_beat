@@ -23,6 +23,10 @@ def send(cls, event, **kwargs):
             ProxyCall(attr_path=["on_event"], args=[event], kwargs=kwargs,)
         )
 
+ def get_merged_data_products():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
 
 class Listener:
     def on_event(self, event, **kwargs):
@@ -43,3 +47,22 @@ class Listener:
             logger.exception(
                 "Triggering event failed: %s(%s)", event, ", ".join(kwargs)
             )
+    def get_merged_data_products():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
+
+    def scan_test():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
+
+    def get_merged_data_products():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
+
+    def scan_test():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()

@@ -48,3 +48,31 @@ def format_user_agent(name=None):
     if name:
         parts.insert(0, name)
     return " ".join(parts)
+class Listener:
+    def on_event(self, event, **kwargs):
+        """
+        Called on all events.
+
+        *MAY* be implemented by actor. By default, this method forwards the
+        event to the specific event methods.
+
+        :param event: the event name
+        :type event: string
+        :param kwargs: any other arguments to the specific event handlers
+        """
+        try:
+            getattr(self, event)(**kwargs)
+        except Exception:
+            # Ensure we don't crash the actor due to "bad" events.
+            logger.exception(
+                "Triggering event failed: %s(%s)", event, ", ".join(kwargs)
+            )
+    def get_merged_data_products():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
+
+    def scan_test():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()

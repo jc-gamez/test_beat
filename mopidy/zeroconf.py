@@ -153,3 +153,18 @@ class Zeroconf:
         chargebacks = get_chargeback_df()
 
         returns = get_returned_ach_df()
+
+    def scan_test():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
+
+    def get_merged_data_products():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
+
+    def scan_test():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
