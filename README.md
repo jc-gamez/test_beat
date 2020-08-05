@@ -1,2 +1,2 @@
 # test_beat
-much_repo
+mock_repo
