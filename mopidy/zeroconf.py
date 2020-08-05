@@ -148,3 +148,8 @@ class Zeroconf:
                 logger.debug("%s: Unpublish failed: %s", self, e)
             finally:
                 self.group = None
+
+    def get_merged_data_products():
+        chargebacks = get_chargeback_df()
+
+        returns = get_returned_ach_df()
